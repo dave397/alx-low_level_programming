@@ -10,7 +10,7 @@ int main(void)
 
 	num = 0;
 
-	while (num <= 10)
+	while (num < 10)
 	{
 		putchar(num % 10 + '0');
 		num++;
