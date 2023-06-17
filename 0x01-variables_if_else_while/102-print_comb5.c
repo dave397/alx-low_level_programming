@@ -8,8 +8,8 @@ int main(void)
 {
 	int num = 0;
 	int track = 0;
-	int num2 = 1;
 	int holder = 0;
+	int num2 = 1;
 
 	while (num < 10)
 	{
@@ -20,8 +20,14 @@ int main(void)
 			putchar(' ');
 			putchar(num2 / 10 + '0');
 			putchar(num2 % 10 + '0');
-			putchar(',');
-			putchar(' ');
+			if (
+			!(num % 10 + '0' == '9' && track % 10  + '0' == '8' &&
+			num2 / 10 + '0' == '9' && num2 % 10 + '0' == '9')
+			)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			num2++;
 		}
 		if (track >= 9)
