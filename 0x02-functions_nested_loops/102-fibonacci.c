@@ -16,7 +16,14 @@ int main(void)
 
 	while (count < 50)
 	{
-		printf("%li, ", curr);
+		if (count == 49)
+		{
+			printf("%li", curr);
+		}
+		else
+		{
+			printf("%li, ", curr);
+		}
 
 		next = start + curr;
 		start = curr;
