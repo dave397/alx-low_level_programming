@@ -6,17 +6,17 @@
  */
 int main(void)
 {
-	int start = 0;
+	long int start = 1;
 
-	int curr = 1;
+	long int curr = 1;
 
-	int next;
+	long int next;
 
 	int count = 0;
 
 	while (count < 50)
 	{
-		printf("%d, ", start);
+		printf("%li, ", curr);
 
 		next = start + curr;
 		start = curr;
