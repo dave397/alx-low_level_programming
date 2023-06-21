@@ -8,13 +8,16 @@
 int main()
 {
 	int sum = 0;
+
+	int count = 1;
 	
-	for (int count = 1; count < 1024; count++)
+	while (count < 1024)
 	{
 		if (count % 3 == 0 || count % 5 == 0)
 		{
 			sum = sum + count;
 		}
+		count++;
 	}
 
 	printf("%d\n", sum);
