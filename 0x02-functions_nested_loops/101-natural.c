@@ -7,10 +7,16 @@
  */
 int main()
 {
-	int r;
+	int sum = 0;
 	
-	r = sum_of_multiples(1024);
+	for (int count = 1; count < 1024; count++)
+	{
+		if (count % 3 == 0 || count % 5 == 0)
+		{
+			sum = sum + count;
+		}
+	}
 
-	printf("%d\n", r);
+	printf("%d\n", sum);
 	return (0);
 }
