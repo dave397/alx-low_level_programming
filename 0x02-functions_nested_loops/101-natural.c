@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * sum_of_multiples - Print the sum of multiples
+ * main - Entry Point
+ * Description - Print the sum of multiples
  *
  * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
 	int sum = 0;
 
 	int count = 1;
-	
+
 	while (count < 1024)
 	{
 		if (count % 3 == 0 || count % 5 == 0)
