@@ -6,25 +6,31 @@
  */
 int main(void)
 {
-	long int start = 1;
+	unsigned int start, curr = 1;
 
-	long int curr = 1;
-
-	long int next;
+	unsigned int next;
 
 	int count = 0;
 
 	while (count < 98)
 	{
-		if (count == 97)
+		if (curr >= 1000000000)
 		{
-			printf("%li", curr);
+			long int upper = curr / 1000000000;
+			long int lower = curr % 1000000000;
+
+			if (count == 97)
+				printf("%li", upper, lower);
+			else
+				printf("%li, ", upper, lower);
 		}
 		else
 		{
-			printf("%li, ", curr);
+			if (count == 97)
+				printf("%u", curr);
+			else
+				printf("%u, ", curr);
 		}
-
 		next = start + curr;
 		start = curr;
 		curr = next;
