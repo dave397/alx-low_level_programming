@@ -18,7 +18,7 @@ void rev_string(char *s)
 		count++;
 	}
 
-	while (i <= count)
+	while (i < count)
 	{
 		hol = s[i];
 		s[i] = s[count - 1];
