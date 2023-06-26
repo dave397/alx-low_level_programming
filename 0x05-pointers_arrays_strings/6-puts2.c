@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * puts2 - from first character print every other character in string
@@ -10,10 +11,17 @@ void puts2(char *str)
 {
 	int count = 0;
 
+	int i  = 0;
+
 	while (str[count])
 	{
-		_putchar(str[count]);
-		count = count + 2;
+		count++;
+	}
+	while (i <= count)
+	{
+		/*printf("%c", str[count]);*/
+		_putchar(str[i]);
+		i = i + 2;
 	}
 	_putchar('\n');
 
