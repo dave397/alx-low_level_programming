@@ -19,11 +19,11 @@ void puts_half(char *str)
 	}
 
 	if ((count - 1) % 2 != 0)
-		start = (count - 1) / 2;
+		start = (count - 2) / 2;
 	else
 		start = count / 2;
 
-	while (start < count)
+	while (start < (count - 1))
 	{
 		/*printf("%c", str[count]);*/
 		_putchar(str[start + 1]);
