@@ -26,7 +26,7 @@ void puts_half(char *str)
 	while (start < count)
 	{
 		/*printf("%c", str[count]);*/
-		_putchar(str[start]);
+		_putchar(str[start + 1]);
 		start++;
 	}
 	_putchar('\n');
