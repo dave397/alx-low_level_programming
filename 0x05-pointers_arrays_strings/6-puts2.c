@@ -17,7 +17,7 @@ void puts2(char *str)
 	{
 		count++;
 	}
-	while (i <= count)
+	while (i < count)
 	{
 		/*printf("%c", str[count]);*/
 		_putchar(str[i]);
