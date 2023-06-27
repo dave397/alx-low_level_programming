@@ -43,6 +43,6 @@ int _atoi(char *s)
 		i++;
 	}
 	if (entered)
-		return (digit * sign);
+		return ((int unsigned)digit * sign);
 	return (0);
 }
