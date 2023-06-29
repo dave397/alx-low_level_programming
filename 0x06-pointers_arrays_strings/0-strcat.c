@@ -4,6 +4,7 @@
  * _strcat - concatenate string
  * @dest: first string
  * @src: second string
+ * Return: void
  */
 
 
