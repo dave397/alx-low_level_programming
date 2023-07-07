@@ -3,15 +3,15 @@
 /**
  * main - Entry point
  * @argc: number of passed parameter
- * @argv: array of passed arguments
+ * @argv: strings passed
  * Return: Always 0
  */
 
 int main(int argc, char *argv[])
 {
-	(void)argc;
+	(void)argv;
 
-	printf("%s\n", argv[0]);
+	printf("%d\n", argc - 1);
 
 	return (0);
 }
