@@ -43,5 +43,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (b = 0; b < c; b++)
 		k[a + b] = s2[b];
 
+	k[total] = '\0';
 	return (k);
 }
