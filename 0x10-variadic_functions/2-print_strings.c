@@ -34,7 +34,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			if (s == NULL)
 				printf("%s\n", "(nil)");
 			else
-				if (separator == NULL)
+				if (!separator)
 					printf("%s", s);
 				else
 					printf("%s%s", s, separator);
