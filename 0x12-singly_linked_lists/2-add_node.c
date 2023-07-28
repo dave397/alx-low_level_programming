@@ -13,7 +13,7 @@ list_t *add_node(list_t **head, const char *str)
 	unsigned int nodes = 0;
 
 	list_t *temp;
-	
+
 	while (str[nodes])
 		nodes++;
 
@@ -25,6 +25,7 @@ list_t *add_node(list_t **head, const char *str)
 	temp->str = strdup(str);
 	temp->len = nodes;
 	temp->next = (*head);
+
 	(*head) = temp;
 
 	return (*head);
