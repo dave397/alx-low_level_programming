@@ -41,9 +41,9 @@ listint_t *insert_nodeint_at_index(
 	if (idx == 0)
 	{
 		new->n = n;
-		new->next = NULL;
+		new->next = *head;
 		*head = new;
-		return (*head);
+		return (new);
 	}
 
 	return (NULL);
