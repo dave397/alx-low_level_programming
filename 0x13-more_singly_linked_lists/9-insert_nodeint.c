@@ -69,7 +69,7 @@ listint_t *insert_nodeint_at_index(
 		count++;
 	}
 
-	if (idx == 1)
+	if (idx == 0)
 		add_nodeint(head, n);
 
 	return (NULL);
