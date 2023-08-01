@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * free_listint2 = frees linked list
+ * free_listint2 - frees linked list
  * @head: head of list
  * Return: void
  */
@@ -14,7 +14,7 @@ void free_listint2(listint_t **head)
 	if (*head != NULL)
 	{
 
-		while(*head)
+		while (*head)
 		{
 			temp = (*head)->next;
 			free(*head);
