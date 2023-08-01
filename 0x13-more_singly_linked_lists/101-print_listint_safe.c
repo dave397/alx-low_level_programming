@@ -15,13 +15,13 @@ size_t count_unique_nodes(const listint_t *head)
 	const listint_t *slow, *fast;
 
 	size_t nodes = 1;
-	
+
 	slow = head;
 	fast = head;
 
 	while (slow != NULL && fast != NULL && fast->next != NULL)
 	{
-		slow = slow->next; 
+		slow = slow->next;
 		fast = fast->next->next;
 		nodes++;
 
