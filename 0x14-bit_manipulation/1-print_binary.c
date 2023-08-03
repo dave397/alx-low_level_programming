@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 	else
 	{
-		int bitC = 1 << 12; 
+		int bitC = 1 << 12;
 
 		while (!(n & bitC))
 			bitC >>= 1;
@@ -23,7 +23,8 @@ void print_binary(unsigned long int n)
 			if ((!(n & bitC)) == 0)
 				_putchar('1');
 			else
-				_putchar('0'); 
+				_putchar('0');
+
 			bitC >>= 1;
 		}
 	}
