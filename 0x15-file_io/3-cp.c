@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdarg.h>
+#include <sys/stat.h>
 
 #define BUFFER 1024
 
@@ -38,6 +40,8 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 		exit_with_error(97, "Usage: cp %s %s\n", av[1], av[2]);
+
+	umask(0);
 
 	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	file_from = open(av[1], O_RDONLY);
