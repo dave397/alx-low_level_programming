@@ -9,7 +9,8 @@
  * Return: 1 (Success) otherwise -1 (fail)
  */
 
-int create_file(const char *filename, char *text_content) {
+int create_file(const char *filename, char *text_content)
+{
 
 	int count = 0;
 
@@ -23,7 +24,8 @@ int create_file(const char *filename, char *text_content) {
 	if (reader == -1)
 		return (-1);
 
-	if (text_content == NULL) {
+	if (text_content == NULL)
+	{
 		close(reader);
 		return (1);
 	}
@@ -33,7 +35,8 @@ int create_file(const char *filename, char *text_content) {
 
 	writer = write(reader, text_content, count);
 
-	if (writer == -1) {
+	if (writer == -1)
+	{
 		close(reader);
 		return (-1);
 	}
