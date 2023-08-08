@@ -25,10 +25,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (reader == -1)
 		return (0);
 
-	while ((read_bytes = read(reader, buffer, sizeof(buffer))) > 0)
+	while (total < letters && (read_bytes = read(reader, buffer, sizeof(buffer))) > 0)
 	{
-		ssize_t written = write(STDOUT_FILENO, buffer, read_bytes);
+		if (total +read_bytes > letters)
+			read_bytes = letters - total;
 
+		ssize_t written = write(STDOUT_FILENO, buffer, read_bytes);
+		
 		if (read_bytes != written)
 		{
 			close(reader);
@@ -36,8 +39,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		}
 
 		total += written;
-		if (total >= letters)
-			break;
 	}
 
 	close(reader);
