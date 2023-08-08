@@ -62,7 +62,7 @@ int main(int ac, char **av)
 		{
 			close(file_to);
 			close(file_from);
-			exit_with_error(99, "Error:Can't write to %s\n", av[2]);
+			exit_with_error(99, "Error: Can't write to %s\n", av[2]);
 		}
 	}
 
