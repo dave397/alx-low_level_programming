@@ -39,9 +39,11 @@ int main(int ac, char **av)
 	int file_from, file_to, bytes_w, bytes_r;
 
 	if (ac != 3)
-		exit_with_error(97, "Usage: cp %s %s\n", av[1], av[2]);
+		exit_with_error(97, "Usage: cp file_from file_to \n");
 
 	umask(0);
+	if (av[2] == NULL || !av[2])
+		exit_with_error(99, "Error: Can't write to \n");
 
 	file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	file_from = open(av[1], O_RDONLY);
