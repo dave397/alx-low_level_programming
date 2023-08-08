@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 
+
 #define BUFFER 1024
 
 /**
@@ -19,7 +20,9 @@ void exit_with_error(int code, char *message,  ...)
 
 	va_start(args, message);
 
-	dprintf(2, message, args);
+	vfprintf(stderr, message, args);
+
+	va_end(args);
 
 	exit(code);
 }
@@ -47,7 +50,7 @@ int main(int ac, char **av)
 	file_from = open(av[1], O_RDONLY);
 
 	if (file_to == -1)
-		exit_with_error(98, "Error: Can't write to %s\n", av[2]);
+		exit_with_error(99, "Error: Can't write to %s\n", av[2]);
 
 	if (file_from == -1)
 		exit_with_error(98, "Error: Can't read from file %s\n", av[1]);
