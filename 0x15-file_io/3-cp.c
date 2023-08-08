@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdarg.h>
-#include <sys/stat.h>
 
 #define BUFFER 1024
 
@@ -41,7 +40,6 @@ int main(int ac, char **av)
 	if (ac != 3)
 		exit_with_error(97, "Usage: cp file_from file_to \n");
 
-	umask(0);
 	if (av[2] == NULL || !av[2])
 		exit_with_error(99, "Error: Can't write to \n");
 
@@ -57,7 +55,6 @@ int main(int ac, char **av)
 	while ((bytes_r = read(file_from, buffer, BUFFER)) > 0)
 	{
 		bytes_w = write(file_to, buffer, bytes_r);
-
 		if (bytes_w == -1 || bytes_r != bytes_w)
 		{
 			close(file_to);
@@ -76,6 +73,4 @@ int main(int ac, char **av)
 		exit_with_error(100, "Error: Can't close fd %s\n", av[2]);
 
 	return (0);
-
 }
-
